@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;700&display=swap");
+
+:root {
+  --gold: #ffcc00;
+  --dark: #111;
+  --text: #f5f5f5;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #fff;
+  color: #333;
+}
+
+/* -------- NAVBAR -------- */
+.navbar {
+  background: var(--dark);
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 4rem;
+}
+
+.navbar .logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar .logo:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.navbar a {
+  color: var(--text);
+  margin-left: 1.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+}
+
+/* -------- HERO SECTION -------- */
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  text-align: center;
+  color: white;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* -------- SEARCH BAR -------- */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 650px;
+  margin: 2rem auto 0;
+  background: white;
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.2);
+}
+
+.search-bar input {
+  flex-grow: 1;
+  padding: 1rem 1.5rem;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+  border-radius: 50px 0 0 50px;
+}
+
+.search-bar button {
+  background: var(--gold);
+  color: #000;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 0 50px 50px 0;
+  transition: all 0.3s ease;
+}
+
+.search-bar button:hover {
+  background: #ffdb4d;
+  transform: scale(1.05);
+}
+
+/* -------- FEATURED RESTAURANTS -------- */
+.container {
+  padding: 4rem 2rem;
+}
+
+.featured-restaurants h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Playfair Display", serif;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}

@@ -1,0 +1,41 @@
+├── client/
+│   ├── public/
+│   │   ├── index.html
+│   │   └── ...
+│   ├── src/
+│   │   ├── assets/
+│   │   │   └── styles.css
+│   │   ├── components/
+│   │   │   ├── Navbar.js
+│   │   │   ├── RestaurantCard.js
+│   │   │   └── AuthForm.js
+│   │   ├── context/
+│   │   │   └── AuthContext.js
+│   │   ├── pages/
+│   │   │   ├── HomePage.js
+│   │   │   ├── LoginPage.js
+│   │   │   ├── RegisterPage.js
+│   │   │   ├── RestaurantPage.js
+│   │   │   └── ProfilePage.js
+│   │   ├── services/
+│   │   │   └── api.js
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│   └── ...
+└── server/
+    ├── config/
+    │   └── db.js
+    ├── controllers/
+    │   ├── authController.js
+    │   ├── restaurantController.js
+    │   └── bookingController.js
+    ├── middleware/
+    │   └── authMiddleware.js
+    ├── routes/
+    │   ├── authRoutes.js
+    │   ├── restaurantRoutes.js
+    │   └── bookingRoutes.js
+    ├── .env.example
+    ├── server.js
+    └── package.json

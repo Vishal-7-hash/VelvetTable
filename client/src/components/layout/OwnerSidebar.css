@@ -1,0 +1,44 @@
+.owner-sidebar {
+    width: 250px;
+    background-color: var(--surface-color);
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column; /* Stacks the items vertically */
+    height: calc(100vh - 75px); /* Full height minus navbar */
+    border-right: 1px solid var(--border-color);
+}
+
+.owner-sidebar nav {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* This is important: it makes the nav take all available space */
+}
+
+.owner-sidebar nav a {
+    color: var(--text-muted-color);
+    padding: 1rem;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-bottom: 0.5rem; /* This creates space between links */
+    font-weight: 500;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.owner-sidebar nav a.active {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+.owner-sidebar nav a:not(.active):hover {
+    background-color: #44403C;
+    color: var(--text-color);
+}
+
+.owner-sidebar .sidebar-actions {
+    margin-top: auto; /* This pushes the button to the very bottom */
+}
+
+.owner-sidebar .sidebar-actions .btn {
+    width: 100%;
+    text-align: center;
+}

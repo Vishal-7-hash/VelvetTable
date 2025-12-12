@@ -1,0 +1,47 @@
+
+
+/* Buttons */
+.btn-approve,
+.btn-reject {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  letter-spacing: 0.5px;
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.05);
+}
+
+/* Approve button */
+.btn-approve {
+  background: linear-gradient(90deg, #28a745, #3fd65f);
+  color: #fff;
+}
+
+.btn-approve:hover {
+  background: linear-gradient(90deg, #3fd65f, #28a745);
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(63, 214, 95, 0.5);
+}
+
+/* Reject button */
+.btn-reject {
+  background: linear-gradient(90deg, #dc3545, #ff5c5c);
+  color: #fff;
+}
+
+.btn-reject:hover {
+  background: linear-gradient(90deg, #ff5c5c, #dc3545);
+  transform: translateY(-2px);
+  box-shadow: 0 0 12px rgba(255, 92, 92, 0.5);
+}
+
+/* Optional subtle divider for content separation */
+/* .review-container {
+  background-color: #1a1818;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.02);
+} */

@@ -1,0 +1,59 @@
+.owner-layout {
+    display: flex;
+}
+
+.owner-content {
+    flex-grow: 1;
+    padding: 2rem;
+    height: calc(100vh - 75px);
+    overflow-y: auto;
+}
+
+.restaurant-list-item {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.restaurant-info h3 {
+    margin: 0 0 0.5rem 0;
+}
+.restaurant-info p {
+    margin: 0;
+    color: var(--text-muted-color);
+}
+
+.restaurant-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.status-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.status-approved { background-color: var(--success-color); color: #fff; }
+.status-pending { background-color: var(--warning-color); color: var(--background-color); }
+.status-rejected { background-color: var(--error-color); color: #fff; }
+
+
+/* ... existing styles ... */
+.restaurant-list-image {
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover; /* This is the key property */
+    flex-shrink: 0; /* Prevents the image from shrinking */
+}
+
+

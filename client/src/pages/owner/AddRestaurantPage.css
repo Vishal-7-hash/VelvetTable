@@ -1,0 +1,214 @@
+/* ================================
+   Add Restaurant Page - Dark Theme
+   ================================ */
+
+:root {
+  --bg-dark: #121212;
+  --card-bg: #1e1e1e;
+  --input-bg: #0b1a24; /* unified deep blue */
+  --input-border: #233444;
+  --text-color: #f5f5f5;
+  --muted-text: #aaaaaa;
+  --yellow: #FFD60A;
+  --yellow-hover: #FFC300;
+}
+
+/* ---------- LAYOUT ---------- */
+.owner-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-dark);
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+}
+
+.owner-content {
+  flex: 1;
+  padding: 3rem 4rem;
+  background-color: var(--bg-dark);
+  overflow-y: auto;
+}
+
+/* ---------- PAGE TITLE ---------- */
+.owner-content h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.owner-content h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background-color: var(--yellow);
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* ---------- FORM ---------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* ---------- SECTION BOXES ---------- */
+details {
+  background-color: var(--card-bg);
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+details[open] {
+  border-color: var(--yellow);
+  box-shadow: 0 4px 18px rgba(255, 214, 10, 0.2);
+}
+
+summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+summary h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+/* ---------- FORM GRID ---------- */
+.form-section {
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem 2rem;
+}
+
+/* ---------- INPUT STYLES (Unified Blue Theme) ---------- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: var(--muted-text);
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--yellow);
+  box-shadow: 0 0 6px rgba(255, 214, 10, 0.3);
+  outline: none;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted-text);
+}
+
+/* ---------- SELECT DROPDOWN ARROW ---------- */
+.form-group select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg width='10' height='6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFD60A' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 10px 6px;
+  padding-right: 2rem;
+  cursor: pointer;
+}
+
+/* ---------- FILE INPUT ---------- */
+input[type="file"] {
+  background-color: var(--input-bg);
+  color: var(--muted-text);
+  padding: 6px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+/* ---------- BUTTONS (Unified Yellow) ---------- */
+.btn.btn-primary,
+.sidebar .add-btn {
+  background-color: var(--yellow);
+  color: #000;
+  border: none;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 1rem 1.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 5px 18px rgba(255, 214, 10, 0.25);
+}
+
+.btn.btn-primary:hover,
+.sidebar .add-btn:hover {
+  background-color: var(--yellow-hover);
+  box-shadow: 0 8px 24px rgba(255, 195, 0, 0.35);
+  transform: scale(1.03);
+}
+
+/* ---------- MODAL ---------- */
+.modal {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 10px;
+}
+
+.modal p {
+  font-size: 1rem;
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+  .owner-content {
+    padding: 2rem;
+  }
+
+  .form-section {
+    grid-template-columns: 1fr;
+  }
+}

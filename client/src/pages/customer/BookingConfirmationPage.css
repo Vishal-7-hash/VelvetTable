@@ -1,0 +1,62 @@
+.confirmation-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 1rem;
+}
+
+.confirmation-card {
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 2.5rem;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.confirmation-card h1 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 2rem;
+}
+
+.conf-item {
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.conf-item span {
+    display: block;
+    color: var(--text-muted-color);
+    font-size: 0.9rem;
+}
+
+.conf-item strong {
+    font-size: 1.1rem;
+}
+
+.conf-item .ticket-id {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+}
+
+.qr-code-container {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: white;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.qr-code-container img {
+    display: block;
+    width: 180px;
+    height: 180px;
+}
+
+.footer-note {
+    color: var(--text-muted-color);
+    font-size: 0.9rem;
+}

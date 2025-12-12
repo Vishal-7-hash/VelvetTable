@@ -1,0 +1,186 @@
+/* ======= GLOBAL STYLES ======= */
+.container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #eaeaea;
+}
+
+body {
+  background-color: #121212;
+}
+
+/* ======= HEADINGS ======= */
+h1, h2, h3 {
+  color: #fff;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #f5c518;
+}
+
+p {
+  color: #b3b3b3;
+  font-size: 0.95rem;
+}
+
+/* ======= BUTTONS ======= */
+.btn {
+  background-color: #f5c518;
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffd740;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(245, 197, 24, 0.3);
+}
+
+/* ======= TABS ======= */
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.tab {
+  background: #1f1f1f;
+  color: #b3b3b3;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.tab:hover {
+  color: #f5c518;
+  border-color: #f5c518;
+}
+
+.tab-active {
+  background: #f5c518;
+  color: #000;
+  border: none;
+  box-shadow: 0 4px 10px rgba(245, 197, 24, 0.25);
+}
+
+/* ======= BOOKINGS SECTION ======= */
+.bookings-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.booking-card-item {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.booking-card-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(245, 197, 24, 0.25);
+}
+
+.booking-card-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background: #333;
+}
+
+.booking-card-details {
+  padding: 1rem;
+  flex: 1;
+}
+
+.booking-card-details h3 {
+  font-size: 1.1rem;
+  color: #f5c518;
+  margin-bottom: 0.3rem;
+  text-transform: capitalize;
+}
+
+.booking-card-details p {
+  font-size: 0.9rem;
+  color: #cfcfcf;
+  margin-bottom: 0.2rem;
+}
+
+.booking-card-actions {
+  padding: 0.8rem 1rem 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* ======= EXPLORE SECTION ======= */
+.dashboard-explore {
+  margin-top: 4rem;
+}
+
+.dashboard-explore h2 {
+  margin-bottom: 1rem;
+  color: #f5c518;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+/* ======= RESTAURANT CARD (UNIFIED THEME) ======= */
+.restaurant-grid .restaurant-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+  overflow: hidden;
+  background: #1a1a1a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.restaurant-grid .restaurant-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(245, 197, 24, 0.25);
+}
+
+/* ======= RESPONSIVE DESIGN ======= */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  .booking-card-item img {
+    height: 150px;
+  }
+  .tabs {
+    justify-content: center;
+  }
+  .btn {
+    padding: 0.5rem 1rem;
+  }
+}

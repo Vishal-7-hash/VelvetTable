@@ -1,0 +1,9 @@
+.nav-user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem; /* This adds space between the items */
+}
+
+.nav-username {
+    color: var(--text-muted-color);
+}
